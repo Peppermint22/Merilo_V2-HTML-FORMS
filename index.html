@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<div class="logo">
+<img src="Images/Logo.png" alt="">
+<h1>MEET AND GRILL</h1>
+<h2>Smoky and delicious!</h2>
+</div>
+
+
+ 
+  <div class="container">
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div id="dropdown" class="form-group">
+          <button class="dropdown-toggle">
+              <span>Type of Cuisine</span>
+              <i class="fas fa-caret-down"></i> <!-- Font Awesome 6 -->
+          </button>
+          <ul class="menu">
+              <li class="menu-item"><a href="#">Smoked</a></li>
+              <li class="menu-item"><a href="#">Grill</a></li>
+              <li class="menu-item dropdown">
+                  <a href="#" class="submenu-toggle">
+                      <span>Healthy Options</span>
+                      <i class="fas fa-caret-right"></i> <!-- Font Awesome 6 -->
+                  </a>
+                  <ul class="submenu">
+                      <li class="submenu-item"><a href="#">With Vegetables</a></li>
+                      <li class="submenu-item"><a href="#">Less fat</a></li>
+                      <li class="submenu-item"><a href="#">Salad</a></li>
+                  </ul>
+              </li>
+              <li class="menu-item dropdown">
+                  <a href="#" class="submenu-toggle">
+                      <span>Drinks</span>
+                      <i class="fas fa-caret-right"></i> <!-- Font Awesome 6 -->
+                  </a>
+                  <ul class="submenu">
+                      <li class="submenu-item"><a href="#">Orange Juice</a></li>
+                      <li class="submenu-item"><a href="#">Apple Juice</a></li>
+                      <li class="submenu-item"><a href="#">Beer</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+
+        <!-- Payment Mode Dropdown -->
+        <div class="form-group">
+          <label for="paymentMethod">Choose a Payment method</label>
+          <select id="paymentMethod" name="dpaymentMethod">
+              <option value="CashOn">Cash on Delivery</option>
+              <option value="Online">Gcash</option>
+          </select>
+      </div>
+
+        
+        <div class="form-group">
+            <label for="dineInTakeOut">Dine In/Take Out:</label>
+            <select id="dineInTakeOut" name="dineInTakeOut">
+                <option value="dineIn">Dine In</option>
+                <option value="takeOut">Take Out</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments" cols="30" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="order">Place Order</label>
+            <input type="checkbox" id="order" name="order">
+        </div>
+
+        <div class="buttons">
+            <button type="button" onclick="cancel()">Cancel</button>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
